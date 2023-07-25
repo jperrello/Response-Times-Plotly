@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+  }
+
+.graph_container {
+  display: flex;
+  position: relative;
+  margin-left: 50px;
+  margin-right: 10px;
+}

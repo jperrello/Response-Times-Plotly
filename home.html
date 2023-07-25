@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average Response Time</title>
+  <script src="script.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="formatting.css">
+</head>
+<body>
+    <h1 class="container"><b>Average Response Time</b></h1>
+    <input type="file" id="jsonFileInput">
+    <button onclick="handleButtonClick()">Parse JSON</button>
+    <div id="chartContainer" class="graph_container"></div>
+    <div id="lineChartContainer" class="graph_container"></div>
+    <div class = "container" id="outputInfo"></div>
+    <!--Need to add HTML button to bypass CORS error, if we have a server this isnt necessary-->
+    <script>
+      function handleButtonClick() {
+        const inputFile = document.getElementById("jsonFileInput").files[0];
+        if (inputFile) {
+          readJSONFile(inputFile);
+        } else {
+          console.error("No file selected.");
+        }
+      }
+    </script>
+    
+</body>
+</html>
